@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - TechBazaar</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+    <!-- ========== NAVBAR (Same as other pages) ========== -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-laptop-code me-2"></i>TechBazaar
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="fas fa-home me-1"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html"><i class="fas fa-store me-1"></i> Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="product-list.html"><i class="fas fa-box-open me-1"></i> Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"><i class="fas fa-envelope me-1"></i> Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-outline-light" href="checkout.html">
+                            <i class="fas fa-shopping-cart me-1"></i> Cart 
+                            <span class="badge bg-danger cart-count">3</span> <!-- Dynamic count -->
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== CHECKOUT HERO ========== -->
+    <header class="checkout-hero bg-warning bg-gradient text-dark py-4">
+        <div class="container py-2 text-center">
+            <h1 class="display-6 fw-bold mb-2">Secure Checkout</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="shop.html">Cart</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Checkout</li>
+                </ol>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ========== MAIN CHECKOUT SECTION ========== -->
+    <main class="checkout-page py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Left Column - Billing/Shipping -->
+                <div class="col-lg-8">
+                    <div class="card mb-4 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="fw-bold mb-4"><i class="fas fa-truck me-2"></i>Delivery Information</h3>
+                            
+                            <!-- Billing Address Form -->
+                            <form id="billingForm">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="firstName" class="form-label">First Name</label>
+                                        <input type="text" class="form-control" id="firstName" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="lastName" class="form-label">Last Name</label>
+                                        <input type="text" class="form-control" id="lastName" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="phone" class="form-label">Phone</label>
+                                        <input type="tel" class="form-control" id="phone" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="address" class="form-label">Address</label>
+                                        <input type="text" class="form-control" id="address" required>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="city" class="form-label">City</label>
+                                        <input type="text" class="form-control" id="city" required>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="state" class="form-label">State</label>
+                                        <select class="form-select" id="state" required>
+                                            <option value="">Select...</option>
+                                            <option>Delhi</option>
+                                            <option>Maharashtra</option>
+                                            <option>Karnataka</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="zip" class="form-label">ZIP Code</label>
+                                        <input type="text" class="form-control" id="zip" required>
+                                    </div>
+                                    <div class="col-12 mt-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="sameShipping">
+                                            <label class="form-check-label" for="sameShipping">
+                                                Shipping address same as billing
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Payment Method -->
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="fw-bold mb-4"><i class="fas fa-credit-card me-2"></i>Payment Method</h3>
+                            
+                            <div class="payment-options">
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="radio" name="paymentMethod" id="creditCard" checked>
+                                    <label class="form-check-label" for="creditCard">
+                                        Credit/Debit Card
+                                    </label>
+                                </div>
+                                
+                                <!-- Credit Card Form (shown when selected) -->
+                                <div class="card-payment-form">
+                                    <div class="row g-3">
+                                        <div class="col-12">
+                                            <label for="cardNumber" class="form-label">Card Number</label>
+                                            <input type="text" class="form-control" id="cardNumber" placeholder="1234 5678 9012 3456">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="cardName" class="form-label">Name on Card</label>
+                                            <input type="text" class="form-control" id="cardName">
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label for="cardExpiry" class="form-label">Expiry</label>
+                                            <input type="text" class="form-control" id="cardExpiry" placeholder="MM/YY">
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label for="cardCvv" class="form-label">CVV</label>
+                                            <input type="text" class="form-control" id="cardCvv" placeholder="123">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="radio" name="paymentMethod" id="paypal">
+                                    <label class="form-check-label" for="paypal">
+                                        PayPal
+                                    </label>
+                                </div>
+                                
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="paymentMethod" id="cod">
+                                    <label class="form-check-label" for="cod">
+                                        Cash on Delivery (COD)
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Order Summary -->
+                <div class="col-lg-4">
+                    <div class="card border-0 shadow-sm sticky-top" style="top: 20px;">
+                        <div class="card-body">
+                            <h3 class="fw-bold mb-4"><i class="fas fa-receipt me-2"></i>Order Summary</h3>
+                            
+                            <!-- Cart Items -->
+                            <div class="cart-items mb-4">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <div>
+                                        <h6 class="mb-1">Sony PlayStation 5</h6>
+                                        <small class="text-muted">Qty: 1</small>
+                                    </div>
+                                    <div class="text-end">
+                                        <div class="fw-bold">₹49,990</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between mb-3">
+                                    <div>
+                                        <h6 class="mb-1">Premium Smartwatch</h6>
+                                        <small class="text-muted">Qty: 2</small>
+                                    </div>
+                                    <div class="text-end">
+                                        <div class="fw-bold">₹25,998</div>
+                                    </div>
+                                </div>
+                                
+                                <hr>
+                                
+                                <div class="d-flex justify-content-between mb-2">
+                                    <div>Subtotal</div>
+                                    <div>₹75,988</div>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <div>Shipping</div>
+                                    <div>₹99</div>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <div>Tax (18%)</div>
+                                    <div>₹13,677</div>
+                                </div>
+                                <div class="d-flex justify-content-between fw-bold fs-5 mt-3">
+                                    <div>Total</div>
+                                    <div>₹89,764</div>
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-primary w-100 btn-lg" id="placeOrderBtn">
+                                <i class="fas fa-lock me-2"></i>Place Order
+                            </button>
+                            
+                            <div class="text-center mt-3">
+                                <img src="assets/img/payments/visa.svg" alt="Visa" height="30" class="me-2">
+                                <img src="assets/img/payments/mastercard.svg" alt="Mastercard" height="30" class="me-2">
+                                <img src="assets/img/payments/paypal.svg" alt="PayPal" height="30">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ========== FOOTER (Same as other pages) ========== -->
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3">TechBazaar</h5>
+                    <p>Your one-stop shop for all electronic gadgets and accessories at competitive prices.</p>
+                    <div class="social-icons mt-3">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4">
+                    <h6 class="fw-bold">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white-50">Home</a></li>
+                        <li class="mb-2"><a href="shop.html" class="text-white-50">Shop</a></li>
+                        <li class="mb-2"><a href="product-list.html" class="text-white-50">Products</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-white-50">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-4">
+                    <h6 class="fw-bold">Customer Service</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50">FAQs</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Shipping Policy</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Return Policy</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-4">
+                    <h6 class="fw-bold">Contact Info</h6>
+                    <ul class="list-unstyled text-white-50">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> 123 Tech Street, City</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> +1 234 567 890</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> info@techbazaar.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2024 TechBazaar. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <img src="assets/img/payments/visa.svg" alt="Visa" height="30" class="me-2">
+                    <img src="assets/img/payments/mastercard.svg" alt="Mastercard" height="30" class="me-2">
+                    <img src="assets/img/payments/paypal.svg" alt="PayPal" height="30">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== SCRIPTS ========== -->
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script>
+        // Form submission handling
+        document.getElementById('placeOrderBtn').addEventListener('click', function() {
+            // Validate form
+            const form = document.getElementById('billingForm');
+            const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked').value;
+            
+            if (form.checkValidity()) {
+                // Process order (in real app, this would be AJAX)
+                alert('Order placed successfully! Thank you for shopping with TechBazaar.');
+                window.location.href = 'index.html';
+            } else {
+                alert('Please fill all required fields correctly.');
+            }
+        });
+
+        // Payment method toggle
+        document.querySelectorAll('input[name="paymentMethod"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                // In a real app, you'd show/hide payment forms
+                console.log('Selected payment:', this.id);
+            });
+        });
+    </script>
+</body>
+</html>
