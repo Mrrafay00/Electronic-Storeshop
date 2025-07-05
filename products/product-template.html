@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - TechBazaar</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+</head>
+
+<body>
+    <!-- ========== NAVBAR (Same as other pages) ========== -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../../index.html">
+                <i class="fas fa-laptop-code me-2"></i>TechBazaar
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html"><i class="fas fa-home me-1"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../shop.html"><i class="fas fa-store me-1"></i> Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../product-list.html"><i class="fas fa-box-open me-1"></i> Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../contact.html"><i class="fas fa-envelope me-1"></i> Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-outline-light" href="../../checkout.html">
+                            <i class="fas fa-shopping-cart me-1"></i> Cart 
+                            <span class="badge bg-danger cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== PRODUCT DETAILS SECTION ========== -->
+    <main class="product-details py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Product Images -->
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <!-- Main Product Image -->
+                            <div class="product-main-img text-center mb-3">
+                                <img id="mainProductImg" src="../../assets/img/products/placeholder-product.jpg" 
+                                     alt="Product Image" class="img-fluid" style="max-height: 400px;">
+                            </div>
+                            
+                            <!-- Thumbnail Gallery -->
+                            <div class="product-thumbnails d-flex justify-content-center flex-wrap gap-2">
+                                <img src="../../assets/img/products/placeholder-product.jpg" 
+                                     alt="Thumbnail 1" 
+                                     class="img-thumbnail cursor-pointer" 
+                                     style="width: 80px; height: 80px; object-fit: cover;">
+                                
+                                <img src="../../assets/img/products/placeholder-product.jpg" 
+                                     alt="Thumbnail 2" 
+                                     class="img-thumbnail cursor-pointer" 
+                                     style="width: 80px; height: 80px; object-fit: cover;">
+                                
+                                <img src="../../assets/img/products/placeholder-product.jpg" 
+                                     alt="Thumbnail 3" 
+                                     class="img-thumbnail cursor-pointer" 
+                                     style="width: 80px; height: 80px; object-fit: cover;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <!-- Product Title & Meta -->
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div>
+                                    <h1 class="h2 fw-bold">Product Name</h1>
+                                    <div class="text-muted">SKU: <span id="productSku">PROD12345</span></div>
+                                </div>
+                                <div class="badge bg-success">In Stock</div>
+                            </div>
+                            
+                            <!-- Ratings -->
+                            <div class="mb-3">
+                                <span class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </span>
+                                <a href="#reviews" class="small ms-2">(24 reviews)</a>
+                            </div>
+                            
+                            <!-- Price -->
+                            <div class="mb-4">
+                                <h2 class="text-primary fw-bold">₹12,999</h2>
+                                <del class="text-muted small">₹15,999</del>
+                                <span class="badge bg-danger ms-2">18% OFF</span>
+                            </div>
+                            
+                            <!-- Key Features -->
+                            <div class="mb-4">
+                                <h5 class="fw-bold">Key Features:</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-1"><i class="fas fa-check text-success me-2"></i> Feature 1</li>
+                                    <li class="mb-1"><i class="fas fa-check text-success me-2"></i> Feature 2</li>
+                                    <li class="mb-1"><i class="fas fa-check text-success me-2"></i> Feature 3</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Quantity Selector -->
+                            <div class="mb-4">
+                                <label class="form-label fw-bold">Quantity:</label>
+                                <div class="input-group" style="width: 150px;">
+                                    <button class="btn btn-outline-secondary quantity-minus" type="button">-</button>
+                                    <input type="number" class="form-control text-center quantity-input" value="1" min="1">
+                                    <button class="btn btn-outline-secondary quantity-plus" type="button">+</button>
+                                </div>
+                            </div>
+                            
+                            <!-- Action Buttons -->
+                            <div class="d-flex gap-2 mb-4">
+                                <button class="btn btn-primary flex-grow-1 add-to-cart">
+                                    <i class="fas fa-cart-plus me-2"></i> Add to Cart
+                                </button>
+                                <button class="btn btn-outline-secondary">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                            </div>
+                            
+                            <!-- Product Meta -->
+                            <div class="border-top pt-3 small text-muted">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="mb-2">
+                                            <span class="fw-bold">Category:</span> Electronics
+                                        </div>
+                                        <div class="mb-2">
+                                            <span class="fw-bold">Brand:</span> Sony
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="mb-2">
+                                            <span class="fw-bold">Warranty:</span> 1 Year
+                                        </div>
+                                        <div class="mb-2">
+                                            <span class="fw-bold">Delivery:</span> 2-3 Days
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Tabs -->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <ul class="nav nav-tabs" id="productTabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="description-tab" data-bs-toggle="tab" 
+                                            data-bs-target="#description" type="button" role="tab">
+                                        Description
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="specs-tab" data-bs-toggle="tab" 
+                                            data-bs-target="#specs" type="button" role="tab">
+                                        Specifications
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" 
+                                            data-bs-target="#reviews" type="button" role="tab">
+                                        Reviews (24)
+                                    </button>
+                                </li>
+                            </ul>
+                            <div class="tab-content p-3" id="productTabsContent">
+                                <!-- Description Tab -->
+                                <div class="tab-pane fade show active" id="description" role="tabpanel">
+                                    <h5 class="fw-bold mb-3">Product Description</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus 
+                                    hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut 
+                                    eleifend nibh porttitor. Ut in nulla enim.</p>
+                                    <p>Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse 
+                                    dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.</p>
+                                </div>
+                                
+                                <!-- Specifications Tab -->
+                                <div class="tab-pane fade" id="specs" role="tabpanel">
+                                    <h5 class="fw-bold mb-3">Technical Specifications</h5>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered">
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row" style="width: 30%;">Model</th>
+                                                    <td>XZ-2000</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Dimensions</th>
+                                                    <td>15 x 10 x 5 cm</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Weight</th>
+                                                    <td>500g</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Color</th>
+                                                    <td>Black</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <!-- Reviews Tab -->
+                                <div class="tab-pane fade" id="reviews" role="tabpanel">
+                                    <h5 class="fw-bold mb-3">Customer Reviews</h5>
+                                    <div class="mb-4">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <span class="text-warning me-2">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star-half-alt"></i>
+                                            </span>
+                                            <span class="fw-bold">4.5 out of 5</span>
+                                        </div>
+                                        <p class="small text-muted">Based on 24 reviews</p>
+                                    </div>
+                                    
+                                    <!-- Review Item -->
+                                    <div class="border-bottom pb-3 mb-3">
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <div class="fw-bold">Rahul Sharma</div>
+                                            <small class="text-muted">2 days ago</small>
+                                        </div>
+                                        <div class="text-warning mb-2">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                        <p>Great product! Works perfectly as described. Delivery was fast too.</p>
+                                    </div>
+                                    
+                                    <!-- Add Review Button -->
+                                    <button class="btn btn-outline-primary mt-3">
+                                        <i class="fas fa-pen me-2"></i>Write a Review
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Related Products -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <h3 class="fw-bold mb-4">You May Also Like</h3>
+                    <div class="row g-3">
+                        <!-- Related Product 1 -->
+                        <div class="col-md-3 col-6">
+                            <div class="card product-card h-100 border-0 shadow-sm">
+                                <img src="../../assets/img/products/placeholder-product.jpg" class="card-img-top" alt="Related Product">
+                                <div class="card-body">
+                                    <h6 class="card-title">Related Product 1</h6>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h6 class="text-primary mb-0">₹9,999</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Related Product 2 -->
+                        <div class="col-md-3 col-6">
+                            <div class="card product-card h-100 border-0 shadow-sm">
+                                <img src="../../assets/img/products/placeholder-product.jpg" class="card-img-top" alt="Related Product">
+                                <div class="card-body">
+                                    <h6 class="card-title">Related Product 2</h6>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h6 class="text-primary mb-0">₹7,499</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Related Product 3 -->
+                        <div class="col-md-3 col-6">
+                            <div class="card product-card h-100 border-0 shadow-sm">
+                                <img src="../../assets/img/products/placeholder-product.jpg" class="card-img-top" alt="Related Product">
+                                <div class="card-body">
+                                    <h6 class="card-title">Related Product 3</h6>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h6 class="text-primary mb-0">₹12,499</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Related Product 4 -->
+                        <div class="col-md-3 col-6">
+                            <div class="card product-card h-100 border-0 shadow-sm">
+                                <img src="../../assets/img/products/placeholder-product.jpg" class="card-img-top" alt="Related Product">
+                                <div class="card-body">
+                                    <h6 class="card-title">Related Product 4</h6>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h6 class="text-primary mb-0">₹5,999</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ========== FOOTER (Same as other pages) ========== -->
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3">TechBazaar</h5>
+                    <p>Your one-stop shop for all electronic gadgets and accessories at competitive prices.</p>
+                    <div class="social-icons mt-3">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4">
+                    <h6 class="fw-bold">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="../../index.html" class="text-white-50">Home</a></li>
+                        <li class="mb-2"><a href="../../shop.html" class="text-white-50">Shop</a></li>
+                        <li class="mb-2"><a href="../../product-list.html" class="text-white-50">Products</a></li>
+                        <li class="mb-2"><a href="../../contact.html" class="text-white-50">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-4">
+                    <h6 class="fw-bold">Customer Service</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50">FAQs</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Shipping Policy</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Return Policy</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-4">
+                    <h6 class="fw-bold">Contact Info</h6>
+                    <ul class="list-unstyled text-white-50">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> 123 Tech Street, City</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> +1 234 567 890</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> info@techbazaar.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2024 TechBazaar. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <img src="../../assets/img/payments/visa.svg" alt="Visa" height="30" class="me-2">
+                    <img src="../../assets/img/payments/mastercard.svg" alt="Mastercard" height="30" class="me-2">
+                    <img src="../../assets/img/payments/paypal.svg" alt="PayPal" height="30">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== SCRIPTS ========== -->
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="../../assets/js/app.js"></script>
+    <script src="../../assets/js/cart.js" type="module"></script>
+    
+    <!-- Product Page JS -->
+    <script>
+        // Thumbnail image switcher
+        document.querySelectorAll('.product-thumbnails img').forEach(thumb => {
+            thumb.addEventListener('click', function() {
+                const mainImg = document.getElementById('mainProductImg');
+                mainImg.src = this.src;
+                mainImg.alt = this.alt;
+            });
+        });
+        
+        // Quantity controls
+        document.querySelectorAll('.quantity-minus, .quantity-plus').forEach(button => {
+            button.addEventListener('click', function() {
+                const input = this.parentElement.querySelector('.quantity-input');
+                let value = parseInt(input.value);
+                
+                if (this.classList.contains('quantity-minus')) {
+                    value = value > 1 ? value - 1 : 1;
+                } else {
+                    value = value + 1;
+                }
+                
+                input.value = value;
+            });
+        });
+        
+        // Add to Cart button
+        document.querySelector('.add-to-cart')?.addEventListener('click', function() {
+            const productName = document.querySelector('h1').textContent;
+            const priceText = document.querySelector('.text-primary.fw-bold').textContent;
+            const price = parseFloat(priceText.replace(/[^0-9.]/g, ''));
+            const quantity = parseInt(document.querySelector('.quantity-input').value);
+            
+            // Use cart.js functions
+            if (typeof techBazaarCart !== 'undefined') {
+                techBazaarCart.addItem('product-id', productName, price, quantity);
+                
+                // Visual feedback
+                this.innerHTML = '<i class="fas fa-check me-2"></i> Added!';
+                this.classList.remove('btn-primary');
+                this.classList.add('btn-success');
+                
+                setTimeout(() => {
+                    this.innerHTML = '<i class="fas fa-cart-plus me-2"></i> Add to Cart';
+                    this.classList.remove('btn-success');
+                    this.classList.add('btn-primary');
+                }, 2000);
+            }
+        });
+    </script>
+</body>
+</html>
