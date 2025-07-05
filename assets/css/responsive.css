@@ -80,7 +80,7 @@
 /* Navbar collapse fix */
 @media (max-width: 991.98px) {
     .navbar-collapse {
-        background-color: var(--primary-color);
+        background-color: var(--warning-color);
         padding: 1rem;
         margin-top: 0.5rem;
         border-radius: 0.25rem;

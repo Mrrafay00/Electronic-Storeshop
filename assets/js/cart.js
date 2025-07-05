@@ -1,5 +1,5 @@
 /**
- * TechBazaar - Cart JavaScript
+ * Electronic Store Shop - Cart JavaScript
  * Handles: Cart Operations, Checkout, and Cart Page Updates
  */
 
@@ -82,7 +82,7 @@ class Cart {
                 <div class="empty-cart text-center py-5">
                     <i class="fas fa-shopping-cart fa-3x mb-3 text-muted"></i>
                     <h4>Your cart is empty</h4>
-                    <a href="shop.html" class="btn btn-primary mt-3">Continue Shopping</a>
+                    <a href="shop.html" class="btn btn-warning mt-3">Continue Shopping</a>
                 </div>
             `;
             return;
@@ -148,7 +148,7 @@ class Cart {
                 </div>
             </div>
             <div class="d-grid mt-4">
-                <a href="checkout.html" class="btn btn-primary btn-lg">Proceed to Checkout</a>
+                <a href="checkout.html" class="btn btn-warning btn-lg">Proceed to Checkout</a>
             </div>
         `;
 
@@ -195,7 +195,7 @@ class Cart {
 }
 
 // ========== INITIALIZE CART ==========
-const techBazaarCart = new Cart();
+const ElectronicStoreShopCart = new Cart();
 
 // Export for use in other files (if needed)
-export default techBazaarCart;
+export default ElectronicStoreShopCart;
