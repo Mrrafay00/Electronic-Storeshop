@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Smartwatch - TechBazaar</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+</head>
+
+<body>
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../../index.html">
+                <i class="fas fa-laptop-code me-2"></i>TechBazaar
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html"><i class="fas fa-home me-1"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../shop.html"><i class="fas fa-store me-1"></i> Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../product-list.html"><i class="fas fa-box-open me-1"></i> Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../contact.html"><i class="fas fa-envelope me-1"></i> Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-outline-light" href="../../checkout.html">
+                            <i class="fas fa-shopping-cart me-1"></i> Cart 
+                            <span class="badge bg-danger cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== PRODUCT DETAILS ========== -->
+    <main class="product-details py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Smartwatch Images -->
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <!-- Main Image -->
+                            <div class="product-main-img text-center mb-3">
+                                <img id="mainProductImg" src="../../assets/img/products/smartwatch.webp" 
+                                     alt="Premium Smartwatch" class="img-fluid" style="max-height: 400px;">
+                            </div>
+                            
+                            <!-- Thumbnails -->
+                            <div class="product-thumbnails d-flex justify-content-center flex-wrap gap-2">
+                                <img src="../../assets/img/products/smartwatch.webp" 
+                                     alt="Smartwatch Front View" 
+                                     class="img-thumbnail cursor-pointer" 
+                                     style="width: 80px; height: 80px; object-fit: cover;">
+                                
+                                <img src="../../assets/img/products/smartwatch-side.webp" 
+                                     alt="Smartwatch Side View" 
+                                     class="img-thumbnail cursor-pointer" 
+                                     style="width: 80px; height: 80px; object-fit: cover;">
+                                
+                                <img src="../../assets/img/products/smartwatch-app.webp" 
+                                     alt="Smartwatch App" 
+                                     class="img-thumbnail cursor-pointer" 
+                                     style="width: 80px; height: 80px; object-fit: cover;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Smartwatch Info -->
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <!-- Title & Meta -->
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div>
+                                    <h1 class="h2 fw-bold">Premium Smartwatch Pro</h1>
+                                    <div class="text-muted">SKU: <span id="productSku">SWP-2023</span></div>
+                                </div>
+                                <div class="badge bg-success">In Stock</div>
+                            </div>
+                            
+                            <!-- Ratings -->
+                            <div class="mb-3">
+                                <span class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </span>
+                                <a href="#reviews" class="small ms-2">(86 reviews)</a>
+                            </div>
+                            
+                            <!-- Price -->
+                            <div class="mb-4">
+                                <h2 class="text-primary fw-bold">₹12,999</h2>
+                                <del class="text-muted small">₹14,999</del>
+                                <span class="badge bg-danger ms-2">13% OFF</span>
+                            </div>
+                            
+                            <!-- Key Features -->
+                            <div class="mb-4">
+                                <h5 class="fw-bold">Key Features:</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-1"><i class="fas fa-check text-success me-2"></i> 1.78" AMOLED Display</li>
+                                    <li class="mb-1"><i class="fas fa-check text-success me-2"></i> SpO2 & Heart Rate Monitor</li>
+                                    <li class="mb-1"><i class="fas fa-check text-success me-2"></i> 10-Day Battery Life</li>
+                                    <li class="mb-1"><i class="fas fa-check text-success me-2"></i> IP68 Water Resistant</li>
+                                    <li class="mb-1"><i class="fas fa-check text-success me-2"></i> 100+ Sports Modes</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Color Options -->
+                            <div class="mb-4">
+                                <label class="form-label fw-bold">Color:</label>
+                                <div class="d-flex gap-2">
+                                    <div class="color-option active" data-color="black" style="background-color: #000;">
+                                        <span class="visually-hidden">Black</span>
+                                    </div>
+                                    <div class="color-option" data-color="silver" style="background-color: #c0c0c0;">
+                                        <span class="visually-hidden">Silver</span>
+                                    </div>
+                                    <div class="color-option" data-color="blue" style="background-color: #007bff;">
+                                        <span class="visually-hidden">Blue</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Quantity -->
+                            <div class="mb-4">
+                                <label class="form-label fw-bold">Quantity:</label>
+                                <div class="input-group" style="width: 150px;">
+                                    <button class="btn btn-outline-secondary quantity-minus" type="button">-</button>
+                                    <input type="number" class="form-control text-center quantity-input" value="1" min="1">
+                                    <button class="btn btn-outline-secondary quantity-plus" type="button">+</button>
+                                </div>
+                            </div>
+                            
+                            <!-- Action Buttons -->
+                            <div class="d-flex gap-2 mb-4">
+                                <button class="btn btn-primary flex-grow-1 add-to-cart" data-product-id="smartwatch-pro">
+                                    <i class="fas fa-cart-plus me-2"></i> Add to Cart
+                                </button>
+                                <button class="btn btn-outline-secondary">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                            </div>
+                            
+                            <!-- Product Meta -->
+                            <div class="border-top pt-3 small text-muted">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="mb-2">
+                                            <span class="fw-bold">Category:</span> Wearable Tech
+                                        </div>
+                                        <div class="mb-2">
+                                            <span class="fw-bold">Brand:</span> TechBazaar
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="mb-2">
+                                            <span class="fw-bold">Warranty:</span> 1 Year
+                                        </div>
+                                        <div class="mb-2">
+                                            <span class="fw-bold">Delivery:</span> 2-3 Days
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Tabs -->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <ul class="nav nav-tabs" id="productTabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="description-tab" data-bs-toggle="tab" 
+                                            data-bs-target="#description" type="button" role="tab">
+                                        Description
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="specs-tab" data-bs-toggle="tab" 
+                                            data-bs-target="#specs" type="button" role="tab">
+                                        Specifications
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" 
+                                            data-bs-target="#reviews" type="button" role="tab">
+                                        Reviews (86)
+                                    </button>
+                                </li>
+                            </ul>
+                            <div class="tab-content p-3" id="productTabsContent">
+                                <!-- Description Tab -->
+                                <div class="tab-pane fade show active" id="description" role="tabpanel">
+                                    <h5 class="fw-bold mb-3">Product Description</h5>
+                                    <p>The Premium Smartwatch Pro is your perfect health and fitness companion. With its stunning AMOLED display and advanced health monitoring features, stay on top of your wellness goals.</p>
+                                    <p>Track your heart rate, blood oxygen levels, sleep patterns, and more. With 10-day battery life and 100+ sports modes, it's designed for your active lifestyle.</p>
+                                    <div class="ratio ratio-16x9 my-4">
+                                        <iframe src="https://www.youtube.com/embed/xyz123" title="Smartwatch Features" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                                
+                                <!-- Specifications Tab -->
+                                <div class="tab-pane fade" id="specs" role="tabpanel">
+                                    <h5 class="fw-bold mb-3">Technical Specifications</h5>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered">
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row" style="width: 30%;">Display</th>
+                                                    <td>1.78" AMOLED, 448x368 pixels</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Battery Life</th>
+                                                    <td>Up to 10 days (typical use)</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Sensors</th>
+                                                    <td>Heart Rate, SpO2, Accelerometer, Gyroscope</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Water Resistance</th>
+                                                    <td>IP68 (5ATM)</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Connectivity</th>
+                                                    <td>Bluetooth 5.2, iOS & Android</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Dimensions</th>
+                                                    <td>45.9 x 45.9 x 10.7mm</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Weight</th>
+                                                    <td>38g (without strap)</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <!-- Reviews Tab -->
+                                <div class="tab-pane fade" id="reviews" role="tabpanel">
+                                    <h5 class="fw-bold mb-3">Customer Reviews</h5>
+                                    <div class="mb-4">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <span class="text-warning me-2">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                            </span>
+                                            <span class="fw-bold">4.2 out of 5</span>
+                                        </div>
+                                        <p class="small text-muted">Based on 86 reviews</p>
+                                    </div>
+                                    
+                                    <!-- Review Items -->
+                                    <div class="border-bottom pb-3 mb-3">
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <div class="fw-bold">Neha Patel</div>
+                                            <small class="text-muted">3 days ago</small>
+                                        </div>
+                                        <div class="text-warning mb-2">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <p>Best smartwatch under 15k! Battery life is amazing and the display is super crisp.</p>
+                                    </div>
+                                    
+                                    <div class="border-bottom pb-3 mb-3">
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <div class="fw-bold">Rajesh Kumar</div>
+                                            <small class="text-muted">1 week ago</small>
+                                        </div>
+                                        <div class="text-warning mb-2">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                        <p>Great features but the companion app could be better. Sometimes takes time to sync data.</p>
+                                    </div>
+                                    
+                                    <!-- Add Review Button -->
+                                    <button class="btn btn-outline-primary mt-3">
+                                        <i class="fas fa-pen me-2"></i>Write a Review
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Related Products -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <h3 class="fw-bold mb-4">Complete Your Setup</h3>
+                    <div class="row g-3">
+                        <!-- Related Product 1 -->
+                        <div class="col-md-3 col-6">
+                            <div class="card product-card h-100 border-0 shadow-sm">
+                                <img src="../../assets/img/products/wireless-earbuds.webp" class="card-img-top" alt="Wireless Earbuds">
+                                <div class="card-body">
+                                    <h6 class="card-title">Wireless Earbuds Pro</h6>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h6 class="text-primary mb-0">₹5,499</h6>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white border-0">
+                                    <button class="btn btn-sm btn-primary w-100 add-to-cart" data-product-id="earbuds-pro">
+                                        <i class="fas fa-cart-plus me-1"></i> Add
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Related Product 2 -->
+                        <div class="col-md-3 col-6">
+                            <div class="card product-card h-100 border-0 shadow-sm">
+                                <img src="../../assets/img/products/fitness-band.webp" class="card-img-top" alt="Fitness Band">
+                                <div class="card-body">
+                                    <h6 class="card-title">Advanced Fitness Band</h6>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h6 class="text-primary mb-0">₹3,999</h6>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white border-0">
+                                    <button class="btn btn-sm btn-primary w-100 add-to-cart" data-product-id="fitness-band">
+                                        <i class="fas fa-cart-plus me-1"></i> Add
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Related Product 3 -->
+                        <div class="col-md-3 col-6">
+                            <div class="card product-card h-100 border-0 shadow-sm">
+                                <img src="../../assets/img/products/watch-straps.webp" class="card-img-top" alt="Watch Straps">
+                                <div class="card-body">
+                                    <h6 class="card-title">Premium Watch Straps (Pack of 3)</h6>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h6 class="text-primary mb-0">₹1,299</h6>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white border-0">
+                                    <button class="btn btn-sm btn-primary w-100 add-to-cart" data-product-id="watch-straps">
+                                        <i class="fas fa-cart-plus me-1"></i> Add
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Related Product 4 -->
+                        <div class="col-md-3 col-6">
+                            <div class="card product-card h-100 border-0 shadow-sm">
+                                <img src="../../assets/img/products/wireless-charger.webp" class="card-img-top" alt="Wireless Charger">
+                                <div class="card-body">
+                                    <h6 class="card-title">Fast Wireless Charger</h6>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h6 class="text-primary mb-0">₹2,499</h6>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white border-0">
+                                    <button class="btn btn-sm btn-primary w-100 add-to-cart" data-product-id="wireless-charger">
+                                        <i class="fas fa-cart-plus me-1"></i> Add
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3">TechBazaar</h5>
+                    <p>Your one-stop shop for all electronic gadgets and accessories at competitive prices.</p>
+                    <div class="social-icons mt-3">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4">
+                    <h6 class="fw-bold">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="../../index.html" class="text-white-50">Home</a></li>
+                        <li class="mb-2"><a href="../../shop.html" class="text-white-50">Shop</a></li>
+                        <li class="mb-2"><a href="../../product-list.html" class="text-white-50">Products</a></li>
+                        <li class="mb-2"><a href="../../contact.html" class="text-white-50">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-4">
+                    <h6 class="fw-bold">Customer Service</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50">FAQs</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Shipping Policy</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Return Policy</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-4">
+                    <h6 class="fw-bold">Contact Info</h6>
+                    <ul class="list-unstyled text-white-50">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> 123 Tech Street, City</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> +1 234 567 890</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> info@techbazaar.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2024 TechBazaar. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <img src="../../assets/img/payments/visa.svg" alt="Visa" height="30" class="me-2">
+                    <img src="../../assets/img/payments/mastercard.svg" alt="Mastercard" height="30" class="me-2">
+                    <img src="../../assets/img/payments/paypal.svg" alt="PayPal" height="30">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== SCRIPTS ========== -->
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="../../assets/js/app.js"></script>
+    <script src="../../assets/js/cart.js" type="module"></script>
+    
+    <!-- Product Page JS -->
+    <script>
+        // Thumbnail image switcher
+        document.querySelectorAll('.product-thumbnails img').forEach(thumb => {
+            thumb.addEventListener('click', function() {
+                const mainImg = document.getElementById('mainProductImg');
+                mainImg.src = this.src;
+                mainImg.alt = this.alt;
+            });
+        });
+        
+        // Color selector
+        document.querySelectorAll('.color-option').forEach(option => {
+            option.addEventListener('click', function() {
+                document.querySelector('.color-option.active').classList.remove('active');
+                this.classList.add('active');
+                // In a real app, you'd update the product image based on color
+            });
+        });
+        
+        // Quantity controls
+        document.querySelectorAll('.quantity-minus, .quantity-plus').forEach(button => {
+            button.addEventListener('click', function() {
+                const input = this.parentElement.querySelector('.quantity-input');
+                let value = parseInt(input.value);
+                
+                if (this.classList.contains('quantity-minus')) {
+                    value = value > 1 ? value - 1 : 1;
+                } else {
+                    value = value + 1;
+                }
+                
+                input.value = value;
+            });
+        });
+        
+        // Add to Cart button
+        document.querySelector('.add-to-cart')?.addEventListener('click', function() {
+            const productId = this.dataset.productId;
+            const productName = document.querySelector('h1').textContent;
+            const priceText = document.querySelector('.text-primary.fw-bold').textContent;
+            const price = parseFloat(priceText.replace(/[^0-9.]/g, ''));
+            const quantity = parseInt(document.querySelector('.quantity-input').value);
+            const color = document.querySelector('.color-option.active').dataset.color;
+            
+            // Use cart.js functions
+            if (typeof techBazaarCart !== 'undefined') {
+                techBazaarCart.addItem(
+                    productId, 
+                    `${productName} (${color})`, 
+                    price, 
+                    quantity
+                );
+                
+                // Visual feedback
+                this.innerHTML = '<i class="fas fa-check me-2"></i> Added!';
+                this.classList.remove('btn-primary');
+                this.classList.add('btn-success');
+                
+                setTimeout(() => {
+                    this.innerHTML = '<i class="fas fa-cart-plus me-2"></i> Add to Cart';
+                    this.classList.remove('btn-success');
+                    this.classList.add('btn-primary');
+                }, 2000);
+            }
+        });
+
+        // Related products Add to Cart
+        document.querySelectorAll('.product-card .add-to-cart').forEach(button => {
+            button.addEventListener('click', function() {
+                const productCard = this.closest('.product-card');
+                const productId = this.dataset.productId;
+                const productName = productCard.querySelector('.card-title').textContent;
+                const priceText = productCard.querySelector('.text-primary').textContent;
+                const price = parseFloat(priceText.replace(/[^0-9.]/g, ''));
+                
+                if (typeof techBazaarCart !== 'undefined') {
+                    techBazaarCart.addItem(productId, productName, price, 1);
+                    
+                    // Visual feedback
+                    this.innerHTML = '<i class="fas fa-check me-1"></i> Added';
+                    this.classList.remove('btn-primary');
+                    this.classList.add('btn-success');
+                    
+                    setTimeout(() => {
+                        this.innerHTML = '<i class="fas fa-cart-plus me-1"></i> Add';
+                        this.classList.remove('btn-success');
+                        this.classList.add('btn-primary');
+                    }, 2000);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
